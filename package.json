@@ -2,7 +2,7 @@
     "private": false,
     "type": "module",
     "license": "ISC",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "name": "@termehui/validators",
     "description": "Extra validators for Yup",
     "main": "./dist/validators.umd.js",
@@ -10,8 +10,14 @@
     "types": "./dist/validators.d.ts",
     "exports": {
         ".": {
-            "import": "./dist/validators.es.js",
-            "require": "./dist/validators.umd.cjs"
+            "import": {
+                "types": "./dist/validators.d.ts",
+                "default": "./dist/validators.es.js"
+            },
+            "require": {
+                "types": "./dist/validators.d.ts",
+                "default": "./dist/validators.umd.js"
+            }
         }
     },
     "files": [
@@ -35,19 +41,20 @@
         "url": "https://github.com/termehui/validators"
     },
     "scripts": {
-        "build:types": "tsc --project tsconfig.types.json --declaration --emitDeclarationOnly --outDir dist",
-        "build": "vite build && npm run build:types",
+        "build": "vite build",
         "prepare": "npm run build",
         "test": "vitest"
     },
     "dependencies": {
-        "@termehui/date-utils": "^1.0.2",
+        "@termehui/date-utils": "^1.0.5",
+        "@types/moment-jalaali": "^0.7.6",
         "yup": "^1.2.0"
     },
     "devDependencies": {
         "@types/node": "^20.6.1",
         "typescript": "^5.2.2",
         "vite": "^4.4.9",
+        "vite-plugin-dts": "^3.5.3",
         "vitest": "^0.34.4"
     }
 }
