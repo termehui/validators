@@ -197,6 +197,14 @@ Validate persian national code. accept xxx-xxxxxx-x and xxxxxxxxxx formats.
 yup.string().nationalCode();
 ```
 
+### numeric
+
+Validate numeric string.
+
+```ts
+yup.string().numeric();
+```
+
 ### postalCode
 
 Validate persian postal code. accept xxxxx-xxxxx and xxxxxxxxxx formats.

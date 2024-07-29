@@ -10,6 +10,7 @@ import { registerIPPortValidation } from "./validators/ipport";
 import { registerJalaliDateValidator } from "./validators/jalali";
 import { registerMobileValidator } from "./validators/mobile";
 import { registerNationalCodeValidator } from "./validators/nationalcode";
+import { registerNumericValidator } from "./validators/numeric";
 import { registerPostalCodeValidator } from "./validators/postalcode";
 import { registerTelValidator } from "./validators/tel";
 import { registerUnsignedValidator } from "./validators/unsigned";
@@ -31,6 +32,7 @@ export function registerAll() {
     registerJalaliDateValidator();
     registerMobileValidator();
     registerNationalCodeValidator();
+    registerNumericValidator();
     registerPostalCodeValidator();
     registerTelValidator();
     registerUnsignedValidator();
@@ -50,6 +52,7 @@ export {
     registerJalaliDateValidator,
     registerMobileValidator,
     registerNationalCodeValidator,
+    registerNumericValidator,
     registerPostalCodeValidator,
     registerTelValidator,
     registerUnsignedValidator,

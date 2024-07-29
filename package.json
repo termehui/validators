@@ -2,7 +2,7 @@
     "private": false,
     "type": "module",
     "license": "ISC",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "name": "@termehui/validators",
     "description": "Extra validators for Yup",
     "main": "./dist/validators.umd.js",
