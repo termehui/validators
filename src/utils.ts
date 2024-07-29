@@ -163,3 +163,8 @@ export function makeYupKeyedErrors() {
 export function s(v: any): string {
     return v ? `${v}` : "";
 }
+
+// n extract numbers from nullable string
+export function n(v: any): string {
+    return s(v).match(/\d+/g)?.join("") || "";
+}

@@ -125,16 +125,20 @@ yup.string().alnumfa("");
 
 Validate credit card number. this validator accept tow mode, long (20 digit) and short (16 digit) card number. Allowed formats:
 
-- **20 digit**: `xxxx-xxxx-xxxx-xxxx-xxxx` or `xxxx-xxxx-xxxx-xxxx-xxxx`
-- **16 digit**: `xxxx-xxxx-xxxx-xxxx` or `xxxx-xxxx-xxxx-xxxx`
-
-`x` represent one digit.
-
 ```ts
 // 20 digit
 yup.string().credit(true);
 // 16 digit
 yup.string().credit(false, "invalid credit card number");
+```
+
+### iban
+
+Validate iran iban (sheba) number.
+
+```ts
+// 20 digit
+yup.string().iban();
 ```
 
 ### idNumber

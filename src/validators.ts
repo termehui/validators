@@ -2,6 +2,7 @@ export * from "./utils";
 import { registerAlnumValidator } from "./validators/alnum";
 import { registerAlnumFaValidator } from "./validators/alnumfa";
 import { registerCreditCardValidator } from "./validators/credit";
+import { registerIBANValidator } from "./validators/iban";
 import { registerIDNumberValidator } from "./validators/id";
 import { registerIdentifierValidator } from "./validators/identifier";
 import { registerIPValidation } from "./validators/ip";
@@ -22,6 +23,7 @@ export function registerAll() {
     registerAlnumValidator();
     registerAlnumFaValidator();
     registerCreditCardValidator();
+    registerIBANValidator();
     registerIDNumberValidator();
     registerIdentifierValidator();
     registerIPValidation();
@@ -40,6 +42,7 @@ export {
     registerAlnumValidator,
     registerAlnumFaValidator,
     registerCreditCardValidator,
+    registerIBANValidator,
     registerIDNumberValidator,
     registerIdentifierValidator,
     registerIPValidation,
