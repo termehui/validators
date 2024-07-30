@@ -15,7 +15,7 @@ export function registerCreditCardValidator(defaultMessage = "credit") {
             params: { longNum },
             exclusive: true,
             test: (v: Maybe<string>) =>
-                !v || longNum ? /^\d{20}$/.test(n(v)) : /^\d{16}$/.test(n(v)),
+                !v || (longNum ? /^\d{20}$/.test(n(v)) : /^\d{16}$/.test(n(v))),
         })
     );
 }
